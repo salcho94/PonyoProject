@@ -15,6 +15,7 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/ponyo.css" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -27,15 +28,15 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#Histoy">Histoy</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="javascript:void(0)">Login</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#Histoy">HISTORY ❤️</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">NOW TIME ⏱</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" data-bs-toggle="modal" data-bs-target="#loginModal" href="javascript:void(0)">Login</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead bg-primary text-white text-center">
+        <header class="masthead bg-info text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
                 <img class="masthead-avatar mb-5" src="assets/img/ponyo.jpeg" alt="..." style="border-radius:50%;"/>
@@ -122,10 +123,10 @@
             </div>
         </section>
         <!-- Contact Section-->
-        <section class="page-section bg-info" id="about">
+        <section class="page-section bg-warning" id="about">
             <div class="container">
                 <!-- Contact Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Now Time!!</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Now Time!!⏱</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
@@ -363,6 +364,45 @@
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         창닫기
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 6-->
+        <div class="portfolio-modal modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8 text-center">
+                                    <!-- Portfolio Modal - Title-->
+                                    <p><h4>LOGIN</h4></p>
+                                    <p>
+                                        <div class="form-group loginForm" style="text-align: -webkit-center;">
+                                            <input type="text" class="form-control w-50" placeholder="아이디" name="userID" maxlength="20">
+                                        </div>
+                                    </p>                                   
+                                    <p>
+                                        <div class="form-group loginForm">
+                                            <input type="password" class="form-control w-50" placeholder="비밀번호" name="userPassword" maxlength="20">
+                                        </div>
+                                    </p>
+                                    <a href="javascript:alert('포뇨가 만들자 !!');"  class="btn btn-success">
+                                        <i class="fas fa-user "></i>
+                                        로그인
+                                    </a>
+                                    <a href="javascript:alert('포뇨가 만들자 !!');" class="btn btn-primary">
+                                        <i class="fas fa-user fa-fw"></i>
+                                        회원가입
+                                    </a>
+                                    <button class="btn btn-danger" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        취소
                                     </button>
                                 </div>
                             </div>
