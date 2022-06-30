@@ -384,19 +384,19 @@
                                     <p><h4>LOGIN</h4></p>
                                     <p>
                                         <div class="form-group loginForm" style="text-align: -webkit-center;">
-                                            <input type="text" class="form-control w-50" placeholder="아이디" name="userID" maxlength="20">
+                                            <input id="userID" type="text" class="form-control w-50" placeholder="아이디" name="userID" maxlength="20">
                                         </div>
                                     </p>                                   
                                     <p>
                                         <div class="form-group loginForm">
-                                            <input type="password" class="form-control w-50" placeholder="비밀번호" name="userPassword" maxlength="20">
+                                            <input id="userPassword" type="password" class="form-control w-50" placeholder="비밀번호" name="userPassword" maxlength="20">
                                         </div>
                                     </p>
-                                    <a href="javascript:alert('포뇨가 만들자 !!');"  class="btn btn-success">
+                                    <a href="javascript:void(0);" onclick="login();" class="btn btn-success">
                                         <i class="fas fa-user "></i>
                                         로그인
                                     </a>
-                                    <a href="javascript:alert('포뇨가 만들자 !!');" class="btn btn-primary">
+                                    <a href="#" class="btn btn-primary">
                                         <i class="fas fa-user fa-fw"></i>
                                         회원가입
                                     </a>
@@ -420,7 +420,8 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script><!--cdn-->
         <script src="./js/clock.js"></script>
+        <script src="./js/login.js"></script>
     </body>
 </html>
