@@ -8,6 +8,18 @@
 */
 
 
+function loginFocus(){
+    console.log('testtestse')
+    $('#loginModal').modal('show');
+
+    $('#loginModal').on("shown.bs.modal",function(){
+        $('#userID').focus();
+    });
+    
+    //$('#userPassword').focus();
+    
+}
+
 function login() {
 
     let id = $("#userID").val();
