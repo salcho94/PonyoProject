@@ -1,25 +1,37 @@
 /*이름 한글만*/
-
-// let nameInput = document.querySelector('#name');
-
-// function onlyKorean() {
-//   let pattern = /[a-z0-9]|[ \[\]{}()<>?|`~!@#$%^&*-_+=,.;:\"'\\]/g;
-//   this.value = this.value.replace(pattern, '');
-//   this.value = null;
-//   alert('한글만 입력해주세요.');
-  
-// };
-// nameInput.addEventListener('keypress', onlyKorean);
-
-function hangul(){
-
-	if((event.keyCode < 12592) || (event.keyCode > 12687)){
-
-		alert("한글만 입력이 가능합니다.");
-
-		event.returnValue = false
-
+$("#name").keyup(function(event){
+	if (!(event.keyCode >=37 && event.keyCode<=40)) {
+		var inputVal = $(this).val();
+	$(this).val(inputVal.replace(/[a-z0-9]/gi,''));		
 	}
+});
 
+/*별명 영어만*/
+$("#nickname").keyup(function(event){
+	if (!(event.keyCode >=37 && event.keyCode<=40)) {
+	var inputVal = $(this).val();
+	$(this).val(inputVal.replace(/[^a-z]/gi,''));
+	}
+});
+
+/*번호 숫자만*/
+$("#phone").keyup(function(event){
+	if (!(event.keyCode >=37 && event.keyCode<=40)) {
+	var inputVal = $(this).val();
+	$(this).val(inputVal.replace(/[^0-9]/gi,''));
+	}
+});
+
+/*비밀번호 재확인*/
+function passWord() {
+	const p1 = document.getElementById('password1').value;
+	const p2 = document.getElementById('password2').value;
+	if(p1.length < 6) {
+		alert('비밀번호는 6글자 이상이어야 합니다.');
+		return false;
+	}
+	if( p1 != p2 ) {
+		alert("비밀번호가 틀립니다.");
+		return false;
+	} 
 }
-
