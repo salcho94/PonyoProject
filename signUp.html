@@ -9,7 +9,7 @@
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script> 
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
@@ -47,7 +47,7 @@
                   <div class="row">
                     <div class="col-md-6 mb-3">
                       <label for="name">이름</label>
-                      <input type="text" class="form-control" id="name" placeholder="" value="" required>
+                      <input type="text" class="form-control" id="idName" placeholder="" onkeyup="javascript:return onlyKorean('inputkorean');" value="" required>
                       <div class="invalid-feedback">
                         이름을 입력해주세요.
                       </div>
@@ -91,16 +91,20 @@
         
                   <div class="mb-3">
                     <label for="address">주소</label>
-                    <input type="text" class="form-control" id="address" placeholder="서울특별시 강남구" required>
+                    <input type="text" class="form-control" id="sample6_postcode" placeholder="우편번호">
+                    <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
+                    <input type="text" class="form-control" id="sample6_address" placeholder="주소"><br>
+                    <input type="text" class="form-control" id="sample6_detailAddress" placeholder="상세주소">
+                    <input type="text" class="form-control" id="sample6_extraAddress" placeholder="참고항목">
                     <div class="invalid-feedback">
                       주소를 입력해주세요.
                     </div>
                   </div>
         
-                  <div class="mb-3">
+                  <!-- <div class="mb-3">
                     <label for="address2">상세주소<span class="text-muted">&nbsp;(필수 아님)</span></label>
                     <input type="text" class="form-control" id="address2" placeholder="상세주소를 입력해주세요.">
-                  </div>
+                  </div> -->
         
                   <hr class="mb-4">
                   <div class="custom-control custom-checkbox">
@@ -166,6 +170,7 @@
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
         <script src="./js/signUp.js"></script>
     </body>
 </html>
